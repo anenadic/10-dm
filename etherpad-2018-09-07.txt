@@ -1,0 +1,191 @@
+Data Management Discussion - 2018-09-07
+
+	* Chris Erdmann
+	* Mateusz Kuzak
+	* Aleks Nenadic
+	* Jamene Brooks-Kieffer
+	* Laurent Gatto
+	* Toby Hodges
+	* Greg Wilson
+	* Ashley Hetrick
+
+What happens next? Suppose you want to build a Data Analysis pipeline for oteh rpeople to use? What do you need? One of the things that I (Greg) know least about is Data Management.
+
+File organisation
+Target post-workshop people are clear that learning about FAIR principles isn't enough for practical applications right now.
+
+Just telling people to make their data FAIR does not help them if they have TBs of data - they need concrete steps
+
+Case studies?
+Software packages?
+1-2 hours, but no more
+What should we teach them?
+
+Chris: the new Google Dataset Search. We've seen attempts in the past to do this (data.gov) - tried ot use it but metadata in there isn't good. Google's trying to support schema.org and structured data (has tools to help people do this). They have tools to create this structured data. Zenodo sandbox - give people a place that's comfortable and non-persistent.
+Laurent: Discipline-specific. People can agree within field where (raw) data comes from. What people want to learn will depend heavily on what they want to do with that data in the future. Even within discipline there is broad diversity. For learners: take scientific paper and try to reproduce analysis. Helps to teach people what they need. In the past I've tried to approach this right from the beginning of the project - e.g. Data Management Plan (DMP).
+	Greg: I've had people write DMPs. Very rarely heard anyone say that they got value out of writing a plan. Re: discipline-specific: would be happy with "what do you do with tabular data that is already 'tidy'. Natural progression from Carpentries. Problem with paper example is that people can see the problem but not the solution.
+Aleks: teach documentation and metadata. How to identify and handle personal & sensitive data. How to make data FAIR, get a DOI, share data. Link to data in publications. Encourage making data open. Teach about licensing. I hope that DMPs (and Software MPs) will get better over the coming years.
+	Greg: we talked once about the Carpentries providing standard DMPs a la licenses. Here are the options - pick one of these
+	Ashley: DMPtool https://dmptool.org/
+Ashley: DMPtool lowers barrier for entry. Researchers see DM as a hoop to jump through. They want their DOI and the want to be done. We need to get in earlier than that - have flipped to focus on grad students and ECRs. These have been the most popular and the most successful. Go back with basic principles and influence their PIs. Also: prioritise. Schemas are great, but high-skill and high-time investment. Instead, tell people to make sure that they write a README - five Ws and an H
+	Greg: how would you tell difference between who has done training and who hasn't
+Jamene: I have found too, that ECRs and grad students are best target audience. Many storage considerations are discipline specific but basic principles are the same - local/shared computer/network drive/cluser/cloud. (Explain what cloud is). Discuss implications of that choice. What happens when grant is over? Feeds nicely into discussion of personal & sensitive data. I show people the Colectica (https://www.colectica.com/software/colecticaforexcel/) extension to Excel. Free add-on. 
+Mateusz: main role of a DMP is to get people to think about DM. But find that tools that help to make one, stop people from thinking about it. I like Data Stewardship Wizard: https://dsw.fairdata.solutions Researchers cannot come up with DMPs because they don't know what questions come up, or even what data they will have in their project. People don't appreciate DMPs because they don't think that data will ever be reused. Need to change these perceptions. young researchers are less likely to have this problem.
+	Greg: one of the reasons that SWC focusses on grad students because these are the minds that we can change.
+Toby: command line tool designed to bridge the gap between storing data in the cloud and accessing it without additional commands (DTool, developed at Norwich) : http://training.scicomp.jic.ac.uk/docs/data_management_workshop_book/index.html#
+    
+Google Dataset Search
+http://schema.org
+Zenodo sandbox
+https://dmptool.org/
+https://dsw.fairdata.solutions/
+Colectica for Excel free add-on: https://www.colectica.com/software/colecticaforexcel/
+the workshop that contains the 5W's (and 1H): https://uofi.box.com/s/qj4oo93vytcrpnfjtlmjco4zygfvgy6v
+CodeMeta
+
+What's one thing that a person who's taken the training does, that someone who hasn't, doesn't?
+
+Ashley: At our institute, we offer them chance *after* they've got a DOI to make some changes (e.g. add a README) - those who have taken training take that chance because they see that it's worth doing
+Jamene: person who gets it, understands that this doesn't happen by magic - designates a person in their team (Data Tzar) to handle this. They will formalise that - specific role within a team.
+	Greg: Data librarian?
+	Jamene: A DL embedded within a team would do that. But doesn't have to be a librarian. Someone who understands both worlds.
+Chris: It's difficult to work in the open e.g. if you do make errors/forget to do something. People who get it understand that this is worth it.
+Aleks: is there metadata attached? Also, look at filenames - does it contain date? Other metadata? Are they using version control?
+	Greg: say you've got CSV files containing tidy data. Where is metadata?
+	Aleks: an extra README/text file e.g. .txt accompanying the data file.
+Laurent: a project directory - src/scripts, images, data, etc. Nothing in there at the beginning, but at any time a person can find where a specific file is. Structure from the very beginning.
+	Greg: there was a project to create strongly typed directories in Unix. i.e. only contains CSV files.
+	Jamene (in chat): a local PolSci professor here at KU teaches this very prescriptively for R: https://crmda.ku.edu/guide-39-projects
+	Another resource for this is the first 2 chapters of J Scott Long's book "The Workflow of Data Analysis Using Stata": https://www.amazon.com/Workflow-Data-Analysis-Using-Stata/dp/1597180475
+	Maybe this could be of interest too: ProjectTemplate is a system for automating the thoughtless parts of a data analysis project http://projecttemplate.net/
+
+What does it look like to have a mix of local and things that are too large to keep under version control?
+
+Chris: practical examples from recent discussion on carpentries mailing list (link coming soon...). Take more practical things and work with those.
+	Greg: people always want to be told what to install/do and don't want to know about principles. E.g. knowing the value of version control doesn't help you use git. Practical way to approach this: here's what a typical project looks like on day 1 - similar to Laurent's suggestion of reproducing an analysis in a paper. Work through this in 1-2 hours. 
+Chris: The lessons in R are very good, saw people gravitating to this in the FAIR Data & Software Carpentries workshop that Mateusz and I were at
+	Mateusz: unfortunately it’s not that easy to do the same in Python :(
+	Greg: we can help set an agenda. Point out that something's much easier to do in R and point to tools that make it easier, this can encourage people to make the effort to add these tools
+
+Like a 10 simple rules paper: simple steps to get to the kind of data that you wish you had. Practical steps that you go through to get things in order. e.g. step 4: answer five Ws and an H.
+
+Chris: you also seem to be reaching out to academics who've gone into industry. Jupyter day coming up: aiming for ECRs and grad students.
+Greg: >4 out of 5 grad students will leave academia. We should prepare them for that.
+
+What's one step to get from data stew to the kind of data that they/we wish they had?
+* how to use `rename` to reorganise your data quickly and safely
+create a predictable directory structure, either using a software tool or on your own (see above lines 56-60)
+store raw data separately and *don't do anything to it and document where it came from* (+2)
+	* mkdir my_project; touch my_project/README; mkdir my_project/data my_project/src my_project/output
+	*  use some kind of controlled vocabulary, use same names for variables consistently (ANDS Research Data Vocabs could be a good source)
+Choose storage for the project with intention, e.g. being deliberate about local, network, cloud choices (including terms of service!) and including consideration for the storage format's/location's appropriateness for the class of data/information involved - maybe this means, in concrete terms, writing out a 1 paragraph storage plan that accounts for multiple copies, syncing, and available storage services from one's institution/employer
+(just throwing ideas out):
+-basic metadata/data documentation (5Ws and 1H)
+-develop a simple (i.e., include only the information you really need) file naming convention for each project (that may or may not include versioning information) and ensure it is enforced (this may not be via a technical solution; or it may be enforced by hybrid technical and social mechanisms like, for example, Box and grading performed by a human). But it will need to be enforced by something/someone(s)
+-understand that data management doesn't happen at the end of a project; it should start at the beginning and continue throughout. This means dedicating project time to anticipating and developing a data management process that will be followed throughout, as well as providing some kind of training to collaborators so that they know 1) what to expect and 2) what to do. Neither of these things need to be intensive, but they should exist and be available to everyone involved (example process or workflow document)
+This may not be a concrete step, but the coaching advice to "Begin with the end in mind" is really valuable here - begin with an idea of what you want your "ideal" dataset to look like and then work toward it.
+
+
+
+From our Zoom Chat:
+    
+    From Me to Everyone: (12:00 PM)
+im going to be on mute a lot since I have a cold :S
+From Toby Hodges to Everyone: (12:01 PM)
+https://pad.carpentries.org/data-management-20180907
+I have taken the liberty of using the SWC etherpad system
+From Me to Everyone: (12:11 PM)
+I like the paper assessment idea! Similarly, I’m looking at this exercise, Metadata Detective https://docs.google.com/presentation/d/1tvzF-L3IKlDb0tcrBZIQ_N-AGqYVCgs0T4petwxfhEM/edit?usp=gmail#slide=id.g1cb2a1587a_0_190 for assessing data repositories
+From Ashley Hetrick to Everyone: (12:14 PM)
+https://dmptool.org/
+From Me to Everyone: (12:15 PM)
+there was a great example in the latest blog post from aDMPs https://blog.dmptool.org/2018/08/20/machine-actionable-dmps-what-can-we-automate/
+From Mateusz Kuzak to Everyone: (12:15 PM)
+Data Stewardship Wizard https://dsw.fairdata.solutions
+From Me to Everyone: (12:15 PM)
+Students were able to draw data from various services to automate their DMP
+Bonnie Tijerina has worked with a number of researchers that seem to have real challenges about data privacy https://datasociety.net/people/tijerina-bonnie/
+From Jamene to Everyone: (12:21 PM)
+Colectica for Excel free add-on: https://www.colectica.com/software/colecticaforexcel/
+More about DDI: http://www.ddialliance.org/
+From Me to Everyone: (12:24 PM)
+Maybe the solutions we are pointing to are too structured in a way? Something Mateusz said about mind mapping w/ regard to data management plans sounded like it could be helpful in loosely structuring an activity to help attendees brainstorm?
+From Mateusz Kuzak to Everyone: (12:25 PM)
+irods?
+From Ashley Hetrick to Everyone: (12:25 PM)
+Here's the workshop that contains the 5W's (and 1H): https://uofi.box.com/s/qj4oo93vytcrpnfjtlmjco4zygfvgy6v
+From Toby Hodges to Everyone: (12:26 PM)
+dtool: http://training.scicomp.jic.ac.uk/docs/data_management_workshop_book/index.html#
+From Me to Everyone: (12:29 PM)
+Something I saw recently that was evidence that people get it, that they had a good readme file that others are modeling their work on is https://github.com/the-pudding/data/tree/master/pockets
+From Mateusz Kuzak to Everyone: (12:30 PM)
+https://www.ands.org.au/working-with-data/skills/23-research-data-things
+From Toby Hodges to Everyone: (12:33 PM)
+potential conflict with what we teach in git lesson
+From Me to Everyone: (12:34 PM)
+Metadata should follow the package of files like codemeta
+From Mateusz Kuzak to Everyone: (12:34 PM)
++1
+From Jamene to Everyone: (12:35 PM)
++1
+From Me to Everyone: (12:37 PM)
+hand
+From Laurent to Everyone: (12:38 PM)
+hand
+From Jamene to Everyone: (12:38 PM)
+RE the structured project directory point from Laurent - a local PolSci professor does this in a very prescriptive way for R, and has an R package to impose this on a project: https://crmda.ku.edu/guide-39-projects
+From Laurent to Everyone: (12:39 PM)
+Thanks
+From Me to Everyone: (12:40 PM)
+The lessons in R are very good, saw people gravitating to this in the FAIR Data & Software Carpentries workshop that Mateusz and I were at
+From Mateusz Kuzak to Everyone: (12:41 PM)
+unfortunately it’s not that easy to do the same in Python :(
+From Me to Everyone: (12:41 PM)
+Ditto :(
+From Mateusz Kuzak to Everyone: (12:42 PM)
+pandas is great example R to Python
+From Me to Everyone: (12:42 PM)
++1
+From Me to Everyone: (12:43 PM)
+hand
+From Mateusz Kuzak to Everyone: (12:43 PM)
+10 simple rules for more reusable data
+From Me to Everyone: (12:45 PM)
+I like that, make your librarian happy :)
+From gvwilson to Everyone: (12:45 PM)
+that’s my role in life
+10 simple steps for making data more reusable
+From Laurent to Everyone: (12:45 PM)
+Maybe this could be of interest too: ProjectTemplate is a system for automating the thoughtless parts of a data analysis project http://projecttemplate.net/
+From Jamene to Everyone: (12:45 PM)
+How about "Help your future self" instead of "make your librarian happy"?
+From Mateusz Kuzak to Everyone: (12:46 PM)
+make your future help happy
+From Ashley Hetrick to Everyone: (12:46 PM)
+Jamene, that's awesome; we try to emphasize that documentation is as much for one's future self as for others
+From Mateusz Kuzak to Everyone: (12:46 PM)
+future self
+From Me to Everyone: (12:46 PM)
+one of my favorite lines is metadata is a love note to your future self
+10 simple rules for your future self
+From Ashley Hetrick to Everyone: (12:47 PM)
++1 we have a "documentation is kindness" saying that we actually make people repeat :D
+From Jamene to Everyone: (12:47 PM)
+the other joke is "Your most frequent collaborator is yourself in 3 months; and your past self doesn't answer email"
+From Ashley Hetrick to Everyone: (12:47 PM)
+haha
+From Aleksandra Nenadic to Everyone: (12:47 PM)
+:-)))
+From Me to Everyone: (12:47 PM)
+:)))
+Can I make a pitch for something as well?
+From Ashley Hetrick to Everyone: (12:49 PM)
+we already have the materials, it sounds like!
+From Me to Everyone: (12:49 PM)
+https://librarycarpentry.github.io/lc-research-data/
+From Me to Everyone: (12:55 PM)
+do people create one page guides you can print out and put over your desk for the 10 simple rules papers? That might be helpful for the practical steps you need to keep in mind?
+From Ashley Hetrick to Everyone: (12:55 PM)
+we have standardized dmps for engineering at Illinois, if that's of interest: https://www.library.illinois.edu/enx/nsf-data-management-plans/
+From Me to Everyone: (12:56 PM)
+LIBER has many DMPs https://libereurope.eu/dmpcatalogue/
